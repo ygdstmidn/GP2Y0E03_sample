@@ -1,16 +1,13 @@
-# NUCLEO_F446RE_CubeIDE_template
+# GP2Y0E03_sample
 ## 概要
-NUCLEO_F446REのCubeIDEのテンプレートプロジェクトです．\
-GitHubのテンプレート機能を使って，新しいプロジェクトを作成した後，Scripts内のrenameProject.pyを実行することで，iocファイルの名前等を変更することができます．
->[!NOTE]
->↑この概要は新しいプロジェクト作成後に削除し，新しくプロジェクトの概要を記述してください．\
->また，ファイル先頭のプロジェクト名の部分も変更してください
+[GP2Y0E03ライブラリ](https://github.com/ygdstmidn/GP2Y0E03)のサンプルプロジェクトです．\
+[GP2Y0E03(秋月電子通商)](https://akizukidenshi.com/catalog/g/g107547/)
 
-| 項目         | 仕様             |
-| ------------ | ---------------- |
-| 使用マイコン | NUCLEO_F446RE    |
-| 使用IDE      | CubeIDE,VSCode   |
-| 使用言語等   | C++,STM32CubeHAL |
+| 項目         | 仕様                                                             |
+| ------------ | ---------------------------------------------------------------- |
+| 使用マイコン | [NUCLEO_F446RE](https://os.mbed.com/platforms/ST-Nucleo-F446RE/) |
+| 使用IDE      | CubeIDE,VSCode                                                   |
+| 使用言語等   | C++,STM32CubeHAL                                                 |
 
 ## ピン設定
 | ピン | 設定        | ラベル      | 備考           |
