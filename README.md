@@ -25,6 +25,14 @@
 Code Generator, Generated files\
 ✅Generate peripheral initialization as a pair of '.c/.h' files per peripheral
 
+### I2C1
+MODE: I2C
+#### Parameter Settings
+| 項目            | 設定      | 備考                        |
+| --------------- | --------- | --------------------------- |
+| I2C Speed Mode  | Fast Mode | Standard Modeじゃ無理だった |
+| I2C Clock Speed | 400000Hz  | GP2Y0E03                    |
+
 ## プログラム概要
 ### setup()
 Hello WorldとPCに送信
