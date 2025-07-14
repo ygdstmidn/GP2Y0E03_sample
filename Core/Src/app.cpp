@@ -6,6 +6,7 @@ extern "C"
 #endif
 
 #include "main.h"
+#include "i2c.h"
 #include "usart.h"
 #include "gpio.h"
 
@@ -19,27 +20,14 @@ extern "C"
     // MARK:loop
     void user_loop(void)
     {
-        const uint32_t now = HAL_GetTick();
-        static uint32_t pre = now;
-
-        if (now - pre >= 10)
+        for (uint8_t addr = 1; addr < 128; addr++)
         {
-
-            static int count = 0;
-            count++;
-            if (count >= 10)
+            if (HAL_I2C_IsDeviceReady(&hi2c1, (uint16_t)(addr << 1), 1, 10) == HAL_OK)
             {
-                if (HAL_GPIO_ReadPin(DebugButton_GPIO_Port, DebugButton_Pin) == GPIO_PIN_SET)
-                {
-                    HAL_GPIO_TogglePin(DebugLED_GPIO_Port, DebugLED_Pin);
-                }
-                printf("now,%lu\n", now);
-
-                count = 0;
+                printf("I2C device found at address 0x%02X\r\n", addr);
             }
-
-            pre = now;
         }
+        HAL_Delay(1000);
     }
 
     // MARK:_write (for printf)
