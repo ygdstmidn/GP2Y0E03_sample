@@ -1,0 +1,3 @@
+[submodule "Core/Inc/GP2Y0E03"]
+	path = Core/Inc/GP2Y0E03
+	url = https://github.com/ygdstmidn/GP2Y0E03.git
